@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nayee Dishayen</title>
+    <!-- CSS Styles -->
+    <style>
+        body {
+            width: 350px;
+            margin: 20px auto;
+        }
+        .speech {border: 1px solid #DDD; width: 350px; padding: 0; margin: 0}
+        .speech input {border: 0; width: 280px; display: inline-block; height: 40px; padding: 5px; font-size: 30px;}
+        .speech img {float: right;}
+        .hide {display: none;}
+        .loading {}
+    </style>
+
+    <script type="text/javascript" src="/scripts.js"></script>
+</head>
+<body>
+<!-- Search Form -->
+<form id="speech-form">
+    <div class="speech">
+        <input type="text" name="q" id="transcript" placeholder="Speak" />
+        <img onclick="startDictation()" src="/mike.gif" />
+    </div>
+</form>
+<img id="loading" class="hide" width="350" src="/loading.gif"/>
+</body>
+</html>
