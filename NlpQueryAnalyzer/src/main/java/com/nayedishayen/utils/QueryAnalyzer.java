@@ -1,4 +1,4 @@
-package com.nayedishayen;
+package com.nayedishayen.utils;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -15,10 +15,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-
-/**
- * Created by athul on 8/17/2017.
- */
 
 @Component
 public class QueryAnalyzer {
@@ -57,9 +53,12 @@ public class QueryAnalyzer {
         }
 
         servicesMap.entrySet().forEach(e -> {
-            if(e.getKey().toLowerCase().contains(posMap.get("NN")) || e.getKey().toLowerCase().contains(posMap.get("NNS"))) {
-                if(e.getKey().toLowerCase().contains("application")) {
+            if(e.getKey().toLowerCase().contains(posMap.get("NN")) || e.getKey().toLowerCase().contains(posMap.getOrDefault("NNS", "N/A"))) {
+                System.out.println(e.getKey());
+                if(e.getKey().toLowerCase().contains("application") || e.getKey().toLowerCase().contains("loan")) {
                     results.put(e.getValue(), "aadharId");
+                } else {
+                    results.put(e.getValue(), "searchKey");
                 }
             }
         });

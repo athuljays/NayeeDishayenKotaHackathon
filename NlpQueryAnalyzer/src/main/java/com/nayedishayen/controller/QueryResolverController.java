@@ -1,6 +1,6 @@
 package com.nayedishayen.controller;
 
-import com.nayedishayen.QueryAnalyzer;
+import com.nayedishayen.utils.QueryAnalyzer;
 import com.nayedishayen.models.response.JsonResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
