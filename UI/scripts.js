@@ -49,6 +49,7 @@ function processForm(data) {
     input.type = "text";
     input.name = formField;
     input.placeholder= formField;
+    input.required= true;
     container.appendChild(input);
     container.appendChild(document.createElement("br"));
 }
@@ -88,3 +89,8 @@ function post(url, data, callback) {
     xhr.open("POST", url);
     xhr.send(data);
 }
+
+function submitForm(){
+    alert('Form Submitted succesfully. Request under Process');
+    return false;
+};
